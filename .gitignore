@@ -1,3 +1,4 @@
 /.metadata/
 *.jpg
 *.png
+src/main/resources/application.properties
