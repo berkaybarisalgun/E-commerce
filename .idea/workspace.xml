@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8eb0630b-be5a-4d34-8b17-0a3905705035" name="Changes" comment="Added Login Page for users">
+      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/error.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/error/403.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/error/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/error/500.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/user-photos/26/Screenshot 2023-12-11 150850.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/user-photos/27/Screenshot 2023-12-12 123926.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/FileUploadUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/FileUploadUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/user-photos/26/366x218-ilker-ayrik-kimdir-1516194635641.jpeg" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/6.0.3/spring-security-core-6.0.3.jar!/org/springframework/security/core/userdetails/UserDetailsService.class" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2Q7nfWK6VUL23jgApLJiybzsyiU" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+    <option name="sortByType" value="true" />
+    <option name="sortKey" value="BY_TYPE" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ShopmeBackEndApplication.executor&quot;: &quot;Run&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/bbari/OneDrive/Desktop/Projects/ShopmeEcommerce/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;2f1739484174070aeaf0890c91776e0a&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.shopme.admin.user" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\bbari\OneDrive\Desktop\Projects\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\templates" />
+      <recent name="C:\Users\bbari\OneDrive\Desktop\Projects\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\templates\error" />
+      <recent name="C:\Users\bbari\OneDrive\Desktop\Projects\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\static\js" />
+      <recent name="C:\Users\berka\OneDrive\Masaüstü\Projects\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\templates" />
+      <recent name="C:\Users\berka\OneDrive\Masaüstü\Projects\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\static\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\bbari\OneDrive\Desktop\Projects\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\templates\users" />
+      <recent name="C:\Users\berka\OneDrive\Masaüstü\Projects\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\static\images" />
+      <recent name="C:\Users\berka\OneDrive\Masaüstü\Projects\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\static" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ShopmeBackEndApplication">
+    <configuration name="UserRepositoryTests.testDisableUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ShopmeBackEnd" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shopme.admin.user.export.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.shopme.admin.user" />
+      <option name="MAIN_CLASS_NAME" value="com.shopme.admin.user.UserRepositoryTests" />
+      <option name="METHOD_NAME" value="testDisableUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserRepositoryTests.testEnableUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ShopmeBackEnd" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shopme.admin.user.export.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.shopme.admin.user" />
+      <option name="MAIN_CLASS_NAME" value="com.shopme.admin.user.UserRepositoryTests" />
+      <option name="METHOD_NAME" value="testEnableUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserRepositoryTests.testListFirstPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ShopmeBackEnd" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shopme.admin.user.export.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.shopme.admin.user" />
+      <option name="MAIN_CLASS_NAME" value="com.shopme.admin.user.UserRepositoryTests" />
+      <option name="METHOD_NAME" value="testListFirstPage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserRepositoryTests.testSearchUsers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ShopmeBackEnd" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shopme.admin.user.export.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.shopme.admin.user" />
+      <option name="MAIN_CLASS_NAME" value="com.shopme.admin.user.UserRepositoryTests" />
+      <option name="METHOD_NAME" value="testSearchUsers" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ShopmeEcommerce/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="ShopmeBackEndApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ShopmeBackEnd" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.shopme.admin.ShopmeBackEndApplication" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd" />
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShopmeFrontEndApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ShopmeFrontEnd" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.shopme.site.ShopmeFrontEndApplication" />
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.index.html" />
+      <item itemvalue="JUnit.UserRepositoryTests.testDisableUser" />
+      <item itemvalue="JUnit.UserRepositoryTests.testEnableUser" />
+      <item itemvalue="JUnit.UserRepositoryTests.testListFirstPage" />
+      <item itemvalue="JUnit.UserRepositoryTests.testSearchUsers" />
+      <item itemvalue="Spring Boot.ShopmeBackEndApplication" />
+      <item itemvalue="Spring Boot.ShopmeFrontEndApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JUnit.UserRepositoryTests.testSearchUsers" />
+        <item itemvalue="JUnit.UserRepositoryTests.testListFirstPage" />
+        <item itemvalue="JUnit.UserRepositoryTests.testEnableUser" />
+        <item itemvalue="JUnit.UserRepositoryTests.testDisableUser" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.9-corretto-17.0.9-3183f394aec4-8f899f12" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8eb0630b-be5a-4d34-8b17-0a3905705035" name="Changes" comment="" />
+      <created>1684713593539</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1684713593539</updated>
+      <workItem from="1684713594863" duration="124000" />
+      <workItem from="1684713728494" duration="1516000" />
+      <workItem from="1684715770245" duration="6584000" />
+      <workItem from="1684792228731" duration="720000" />
+      <workItem from="1684792961905" duration="301000" />
+      <workItem from="1684793276372" duration="132000" />
+      <workItem from="1684793422200" duration="678000" />
+      <workItem from="1684797599336" duration="1784000" />
+      <workItem from="1684808006238" duration="294000" />
+      <workItem from="1684808315645" duration="8103000" />
+      <workItem from="1684865418273" duration="2436000" />
+      <workItem from="1684867866779" duration="177000" />
+      <workItem from="1685033101286" duration="154000" />
+      <workItem from="1685159099700" duration="913000" />
+      <workItem from="1685339690291" duration="2836000" />
+      <workItem from="1685353221382" duration="46000" />
+      <workItem from="1685459710697" duration="4631000" />
+      <workItem from="1685490288719" duration="796000" />
+      <workItem from="1685851927786" duration="47000" />
+      <workItem from="1685852236365" duration="591000" />
+      <workItem from="1685973106106" duration="15000" />
+      <workItem from="1685973257653" duration="11000" />
+      <workItem from="1685973342232" duration="13000" />
+      <workItem from="1685976096323" duration="6923000" />
+      <workItem from="1686067370335" duration="606000" />
+      <workItem from="1686128282579" duration="1257000" />
+      <workItem from="1686146206805" duration="527000" />
+      <workItem from="1686297649661" duration="4599000" />
+      <workItem from="1686303526544" duration="20000" />
+      <workItem from="1686304453572" duration="1176000" />
+      <workItem from="1686321851124" duration="496000" />
+      <workItem from="1686382999416" duration="11000" />
+      <workItem from="1686389086637" duration="2652000" />
+      <workItem from="1686412127461" duration="5909000" />
+      <workItem from="1686478435939" duration="120000" />
+      <workItem from="1686821209819" duration="2346000" />
+      <workItem from="1686832031654" duration="3837000" />
+      <workItem from="1687084330411" duration="37000" />
+      <workItem from="1687090900846" duration="1836000" />
+      <workItem from="1687093911921" duration="2000" />
+      <workItem from="1687247055842" duration="15000" />
+      <workItem from="1687433438110" duration="176000" />
+      <workItem from="1687514965988" duration="8635000" />
+      <workItem from="1688411679592" duration="762000" />
+      <workItem from="1688813941905" duration="5888000" />
+      <workItem from="1688846434420" duration="1542000" />
+      <workItem from="1688894021032" duration="346000" />
+      <workItem from="1689497687323" duration="3431000" />
+      <workItem from="1689509366155" duration="2585000" />
+      <workItem from="1689515254215" duration="24000" />
+      <workItem from="1690022653909" duration="7494000" />
+      <workItem from="1690164836488" duration="297000" />
+      <workItem from="1690165262360" duration="254000" />
+      <workItem from="1690167260432" duration="413000" />
+      <workItem from="1690253175212" duration="1212000" />
+      <workItem from="1690302407445" duration="1935000" />
+      <workItem from="1690627820335" duration="1201000" />
+      <workItem from="1690629076327" duration="183000" />
+      <workItem from="1692287599295" duration="1751000" />
+      <workItem from="1692721997904" duration="306000" />
+      <workItem from="1692808679250" duration="3138000" />
+      <workItem from="1692984107266" duration="2581000" />
+      <workItem from="1693033986042" duration="4025000" />
+      <workItem from="1693040516890" duration="3131000" />
+      <workItem from="1693044845831" duration="4000" />
+      <workItem from="1693071984809" duration="228000" />
+      <workItem from="1693125248223" duration="152000" />
+      <workItem from="1693248645813" duration="1217000" />
+      <workItem from="1693249878643" duration="3604000" />
+      <workItem from="1693378486694" duration="5083000" />
+      <workItem from="1693766859085" duration="11000" />
+      <workItem from="1694053252931" duration="1702000" />
+      <workItem from="1694157078270" duration="3349000" />
+      <workItem from="1694172244949" duration="3818000" />
+      <workItem from="1694187783958" duration="16000" />
+      <workItem from="1694219714751" duration="70000" />
+      <workItem from="1694277194221" duration="20000" />
+      <workItem from="1694343515422" duration="599000" />
+      <workItem from="1694346116642" duration="188000" />
+      <workItem from="1694523491172" duration="3090000" />
+      <workItem from="1694584683701" duration="1421000" />
+      <workItem from="1694595036121" duration="55000" />
+      <workItem from="1694980206254" duration="4649000" />
+      <workItem from="1695210466151" duration="355000" />
+      <workItem from="1695558397593" duration="1211000" />
+      <workItem from="1695732919635" duration="1143000" />
+      <workItem from="1695895744717" duration="1387000" />
+      <workItem from="1695907382276" duration="695000" />
+      <workItem from="1696005423271" duration="66000" />
+      <workItem from="1696891892843" duration="658000" />
+      <workItem from="1696929977671" duration="732000" />
+      <workItem from="1697891117372" duration="8000" />
+      <workItem from="1697891143726" duration="3000" />
+      <workItem from="1697891161404" duration="19000" />
+      <workItem from="1697905488739" duration="11000" />
+      <workItem from="1698109038489" duration="3030000" />
+      <workItem from="1704752036431" duration="2675000" />
+      <workItem from="1704845758810" duration="60000" />
+      <workItem from="1706189163885" duration="5523000" />
+      <workItem from="1706195684651" duration="64000" />
+      <workItem from="1706222493413" duration="42000" />
+      <workItem from="1706222553833" duration="42000" />
+      <workItem from="1706222618698" duration="199000" />
+      <workItem from="1706222844270" duration="1562000" />
+      <workItem from="1706245101999" duration="3047000" />
+      <workItem from="1706248329772" duration="4557000" />
+      <workItem from="1706548738464" duration="238000" />
+      <workItem from="1707238996370" duration="2685000" />
+      <workItem from="1707241699627" duration="2634000" />
+      <workItem from="1707244347138" duration="4259000" />
+      <workItem from="1707282665780" duration="173000" />
+      <workItem from="1707475488683" duration="47000" />
+      <workItem from="1707723963618" duration="6764000" />
+      <workItem from="1707891965890" duration="129000" />
+      <workItem from="1708700827418" duration="599000" />
+      <workItem from="1708778774704" duration="3102000" />
+    </task>
+    <task id="LOCAL-00001" summary="Added Login Page for users">
+      <created>1694176119074</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1694176119075</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Added Login Page for users" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Login Page for users" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/security/WebSecurityConfig.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

@@ -1,0 +1,34 @@
+!<!doctype html>
+<html lang="en" xmlns:th="http:thymeleaf.org">
+<head th:fragment="page_head(title)">
+    <meta content="text/html;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0" name="viewport">
+    <title>[[${title}]]</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}" type="text/css"/>
+    <link rel="stylesheet" th:href="@{/fontawesome/all.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/style.css}" type="text/css">
+    <script th:src="@{/webjars/jquery/jquery.min.js}" type="text/javascript"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}" type="text/javascript"></script>
+    <script th:src="@{/js/common.js}" type="text/javascript"></script>
+</head>
+<body>
+
+<div th:fragment="footer" class="text-center m-3">
+    <p>Shopme Control Panel - Copyright &copy; Shopme</p>
+</div>
+
+
+<th th:fragment="column_link(fieldName, columnLabel,removeTag)" th:remove="${removeTag}">
+<a class="text-white"
+   th:href="@{'/users/list/' + ${currentPage} + '?sortField=' + ${fieldName}  +'&sortDir=' + ${sortField != fieldName ? sortDir : reverseSortDir} + ${keyword != null ? '&keyword=' + keyword : ''} + ${categoryId != null ? '&categoryId=' + categoryId : ''}}">
+    [[${columnLabel}]]
+</a>
+<span th:if="${sortField == fieldName}"
+      th:class="${sortDir == 'asc' ? 'fas fa-sort-up' : 'fas fa-sort-down'}" ></span>
+</th>
+
+<a th:fragment="page_link(pageNum, label)" class="page-link"
+   th:href="@{'/users/list/' + ${pageNum} + '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir} + ${keyword != null ? '&keyword=' + keyword : ''} + ${categoryId != null ? '&categoryId=' + categoryId : ''}}">[[${label}]]</a>
+
+</body>
+</html>

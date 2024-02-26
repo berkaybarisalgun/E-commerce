@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<body>
+
+<div th:fragment="menu">
+    <form th:action="@{/logout}" method="post" th:hidden="true" name="logoutForm">
+        <input type="submit" style="display: none;">
+    </form>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <a class="navbar-brand" href="/ShopmeAdmin/">
+            <img src="/ShopmeAdmin/images/ShopmeAdminSmall.png"/>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="topNavbar" class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+
+                <!-- Access to 'Users' module is allowed for Admin only -->
+                <li class="nav-item" sec:authorize="hasAuthority('Admin')">
+                    <a class="nav-link" href="/ShopmeAdmin/users">Users</a>
+                </li>
+
+                <!-- Access to 'Categories' module is allowed for Admin and Editor -->
+                <th:block sec:authorize="hasAnyAuthority('Admin', 'Editor')">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/ShopmeAdmin/categories">Categories</a>
+                    </li>
+                </th:block>
+
+                <!-- Access to 'Brands' module is allowed for Admin and Editor -->
+                <th:block sec:authorize="hasAnyAuthority('Admin', 'Editor')">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/ShopmeAdmin/brands">Brands</a>
+                    </li>
+                </th:block>
+
+                <!-- Access to 'Products' module is allowed for Admin, Salesperson, Editor, and Shipper -->
+                <th:block sec:authorize="hasAnyAuthority('Admin', 'Salesperson', 'Editor', 'Shipper')">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/ShopmeAdmin/products">Products</a>
+                    </li>
+                </th:block>
+
+                <!-- Access to 'Customers' module is allowed for Admin, Salesperson, and Assistant -->
+                <th:block sec:authorize="hasAnyAuthority('Admin', 'Salesperson')">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/ShopmeAdmin/customers">Customers</a>
+                    </li>
+                </th:block>
+
+                <!-- Access to 'Orders' module is allowed for all roles -->
+                <th:block sec:authorize="hasAnyAuthority('Admin', 'Salesperson','Shipper')">
+                <li class="nav-item">
+                    <a class="nav-link" href="/ShopmeAdmin/orders">Orders</a>
+                </li>
+                </th:block>
+
+                <!-- Access to 'Shipping' module is allowed for Admin and Shipper -->
+                <th:block sec:authorize="hasAnyAuthority('Admin', 'Shipper')">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/ShopmeAdmin/shipping">Shipping</a>
+                    </li>
+                </th:block>
+
+                <!-- Access to 'Sales Report' is allowed for Admin only -->
+                <th:block sec:authorize="hasAnyAuthority('Admin','Salesperson')">
+                <li class="nav-item">
+                    <a class="nav-link" href="/ShopmeAdmin/report">Sales Report</a>
+                </li>
+                </th:block>
+
+                <!-- Access to 'Articles' module is allowed for Admin and Editor -->
+                <th:block sec:authorize="hasAnyAuthority('Admin', 'Editor')">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/ShopmeAdmin/articles">Articles</a>
+                    </li>
+                </th:block>
+
+                <!-- Access to 'Menus' module is allowed for Admin and Editor -->
+                <th:block sec:authorize="hasAnyAuthority('Admin', 'Editor')">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/ShopmeAdmin/menus">Menus</a>
+                    </li>
+                </th:block>
+
+                <!-- Access to 'Settings' module is allowed for Admin only -->
+                <li class="nav-item" sec:authorize="hasAuthority('Admin')">
+                    <a class="nav-link" href="/ShopmeAdmin/settings">Settings</a>
+                </li>
+
+
+
+                <li>
+                    <span class="fas fa-user fa-2x icon-silver"></span>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                    th:href="@{/account}" sec:authentication="principal.fullName"></a>
+
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" id="logoutLink" href="">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+</body>
+</html>
