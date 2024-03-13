@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8eb0630b-be5a-4d34-8b17-0a3905705035" name="Changes" comment="Added Login Page for users">
-      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/test/java/com/shopme/admin/category/CategoryRepositoryTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/category/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/category/controller/CategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/categories/categories.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeCommon/src/main/java/com/shopme/common/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeCommon/src/main/java/com/shopme/common/entity/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/category/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/category/CategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeCommon/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeCommon/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/security/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/fragments.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +62,7 @@
     "JUnit.CategoryRepositoryTests.testGetCategory.executor": "Run",
     "JUnit.CategoryRepositoryTests.testPrintHierarchicalCategories.executor": "Run",
     "JavaScript Debug.index.html.executor": "Run",
+    "Maven.ShopmeBackEnd [clean].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -70,7 +75,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/bbari/OneDrive/Desktop/Projects/Leetcode-Problems",
+    "last_opened_file_path": "C:/Users/bbari/OneDrive/Desktop/Projects/E-commerce/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -89,19 +94,20 @@
       <recent name="com.shopme.admin.user" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\bbari\OneDrive\Desktop\Projects\E-commerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\templates" />
       <recent name="C:\Users\bbari\OneDrive\Desktop\Projects\E-commerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd" />
       <recent name="C:\Users\bbari\OneDrive\Desktop\Projects\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\templates" />
       <recent name="C:\Users\bbari\OneDrive\Desktop\Projects\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\templates\error" />
       <recent name="C:\Users\bbari\OneDrive\Desktop\Projects\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\static\js" />
-      <recent name="C:\Users\berka\OneDrive\Masaüstü\Projects\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\bbari\OneDrive\Desktop\Projects\E-commerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\static\images" />
       <recent name="C:\Users\bbari\OneDrive\Desktop\Projects\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\templates\users" />
       <recent name="C:\Users\berka\OneDrive\Masaüstü\Projects\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\static\images" />
       <recent name="C:\Users\berka\OneDrive\Masaüstü\Projects\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\static" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CategoryRepositoryTests.testPrintHierarchicalCategories">
+  <component name="RunManager" selected="Spring Boot.ShopmeBackEndApplication">
     <configuration name="CategoryRepositoryTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ShopmeBackEnd" />
       <extension name="coverage">
@@ -368,6 +374,10 @@
       <workItem from="1708778774704" duration="3102000" />
       <workItem from="1708966489860" duration="1201000" />
       <workItem from="1709821633131" duration="3489000" />
+      <workItem from="1710103940505" duration="1073000" />
+      <workItem from="1710291155402" duration="706000" />
+      <workItem from="1710292767417" duration="132000" />
+      <workItem from="1710294728144" duration="1013000" />
     </task>
     <task id="LOCAL-00001" summary="Added Login Page for users">
       <created>1694176119074</created>
@@ -392,7 +402,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/security/WebSecurityConfig.java</url>
-          <line>64</line>
+          <line>65</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
