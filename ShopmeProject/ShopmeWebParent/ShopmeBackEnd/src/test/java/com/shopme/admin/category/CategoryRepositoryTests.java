@@ -7,13 +7,13 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.annotation.Rollback;
 
+import java.util.List;
 import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 
-
-@DataJpaTest
+@DataJpaTest(showSql = false)
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 @Rollback(false)
 public class CategoryRepositoryTests {
@@ -21,35 +21,40 @@ public class CategoryRepositoryTests {
     @Autowired
     private CategoryRepository repo;
 
+
+
     @Test
-    public void testCreateRootCategory(){
-        Category category=new Category("Test");
-        Category savedCategory=repo.save(category);
+    public void testCreateRootCategory() {
+
+        Category category = new Category("Electronics");
+        Category savedCategory = repo.save(category);
+
         assertThat(savedCategory.getId()).isGreaterThan(0);
     }
 
     @Test
     public void testCreateSubCategory() {
-        Category parent = new Category(3);
-        Category subCategory = new Category("Laptops", parent);
+        Category parent = new Category(2);
+        Category subCategory = new Category("iPhone", parent);
         Category savedCategory = repo.save(subCategory);
+
 
         assertThat(savedCategory.getId()).isGreaterThan(0);
     }
 
     @Test
     public void testGetCategory() {
-        Category category = repo.findById(6).get();
+        Category category = repo.findById(2).get();
         System.out.println(category.getName());
 
         Set<Category> children = category.getChildren();
+
         for (Category subCategory : children) {
             System.out.println(subCategory.getName());
         }
 
-        assertThat(children.size()).isGreaterThan(-1);
+        assertThat(children.size()).isGreaterThan(0);
     }
-
 
     @Test
     public void testPrintHierarchicalCategories() {
@@ -63,12 +68,11 @@ public class CategoryRepositoryTests {
 
                 for (Category subCategory : children) {
                     System.out.println("--" + subCategory.getName());
-                    printChildren(subCategory, 3);
+                    printChildren(subCategory, 1);
                 }
             }
         }
     }
-
 
     private void printChildren(Category parent, int subLevel) {
         int newSubLevel = subLevel + 1;
@@ -85,4 +89,9 @@ public class CategoryRepositoryTests {
         }
     }
 
+    @Test
+    public void testListRootCategories() {
+        List<Category> rootCategories = repo.findRootCategories();
+        rootCategories.forEach(cat -> System.out.println(cat.getName()));
+    }
 }
