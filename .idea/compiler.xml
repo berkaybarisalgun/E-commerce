@@ -16,7 +16,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="ShopmeBackEnd" options="-parameters" />
       <module name="ShopmeCommon" options="-parameters" />
-      <module name="ShopmeFrontEnd" options="" />
+      <module name="ShopmeFrontEnd" options="-parameters" />
     </option>
   </component>
 </project>
