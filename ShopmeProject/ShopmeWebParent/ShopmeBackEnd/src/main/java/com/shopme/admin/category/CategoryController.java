@@ -1,4 +1,4 @@
-package com.shopme.admin.category.controller;
+package com.shopme.admin.category;
 
 import com.shopme.admin.FileUploadUtil;
 import com.shopme.admin.category.CategoryNotFoundException;

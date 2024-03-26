@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8eb0630b-be5a-4d34-8b17-0a3905705035" name="Changes" comment="Added Login Page for users">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="8eb0630b-be5a-4d34-8b17-0a3905705035" name="Changes" comment="Added Login Page for users" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,56 +43,59 @@
     <option name="sortByType" value="true" />
     <option name="sortKey" value="BY_TYPE" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JUnit.CategoryRepositoryTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CategoryRepositoryTests.testCreateRootCategory.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CategoryRepositoryTests.testCreateSubCategory.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CategoryRepositoryTests.testGetCategory.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CategoryRepositoryTests.testPrintHierarchicalCategories.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.ShopmeBackEnd [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.ShopmeBackEnd [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.ShopmeBackEnd [test].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.ShopmeBackEnd [validate].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.ShopmeBackEndApplication.executor&quot;: &quot;Run&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/bbari/OneDrive/Desktop/Projects/E-commerce/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/static/images&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;2f1739484174070aeaf0890c91776e0a&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JUnit.CategoryRepositoryTests.executor": "Run",
+    "JUnit.CategoryRepositoryTests.testCreateRootCategory.executor": "Run",
+    "JUnit.CategoryRepositoryTests.testCreateSubCategory.executor": "Run",
+    "JUnit.CategoryRepositoryTests.testFindByAlias.executor": "Run",
+    "JUnit.CategoryRepositoryTests.testFindByName.executor": "Run",
+    "JUnit.CategoryRepositoryTests.testGetCategory.executor": "Run",
+    "JUnit.CategoryRepositoryTests.testListRootCategories.executor": "Run",
+    "JUnit.CategoryRepositoryTests.testPrintHierarchicalCategories.executor": "Run",
+    "JavaScript Debug.index.html.executor": "Run",
+    "Maven.ShopmeBackEnd [clean].executor": "Run",
+    "Maven.ShopmeBackEnd [install].executor": "Run",
+    "Maven.ShopmeBackEnd [test].executor": "Run",
+    "Maven.ShopmeBackEnd [validate].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.ShopmeBackEndApplication.executor": "Run",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/barisalgun/Documents/Projects/E-commerce/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "spring.configuration.checksum": "2f1739484174070aeaf0890c91776e0a",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.shopme.admin.user" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates" />
       <recent name="C:\Users\bbari\OneDrive\Desktop\Projects\E-commerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\static\images" />
       <recent name="C:\Users\bbari\OneDrive\Desktop\Projects\E-commerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\templates\categories" />
       <recent name="C:\Users\bbari\OneDrive\Desktop\Projects\E-commerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\templates" />
       <recent name="C:\Users\bbari\OneDrive\Desktop\Projects\E-commerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd" />
-      <recent name="C:\Users\bbari\OneDrive\Desktop\Projects\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\bbari\OneDrive\Desktop\Projects\E-commerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\static\images" />
@@ -102,23 +103,15 @@
       <recent name="C:\Users\berka\OneDrive\Masaüstü\Projects\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\static\images" />
       <recent name="C:\Users\berka\OneDrive\Masaüstü\Projects\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\static" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.shopme.admin.category" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.shopme.admin.category.controller" />
+      <recent name="com.shopme.admin.category" />
+    </key>
   </component>
   <component name="RunManager" selected="Spring Boot.ShopmeBackEndApplication">
-    <configuration name="CategoryRepositoryTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ShopmeBackEnd" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.shopme.admin.category.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.shopme.admin.category" />
-      <option name="MAIN_CLASS_NAME" value="com.shopme.admin.category.CategoryRepositoryTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CategoryRepositoryTests.testCreateRootCategory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ShopmeBackEnd" />
       <extension name="coverage">
@@ -135,7 +128,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CategoryRepositoryTests.testCreateSubCategory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CategoryRepositoryTests.testFindByAlias" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ShopmeBackEnd" />
       <extension name="coverage">
         <pattern>
@@ -145,13 +138,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.shopme.admin.category" />
       <option name="MAIN_CLASS_NAME" value="com.shopme.admin.category.CategoryRepositoryTests" />
-      <option name="METHOD_NAME" value="testCreateSubCategory" />
+      <option name="METHOD_NAME" value="testFindByAlias" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CategoryRepositoryTests.testGetCategory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CategoryRepositoryTests.testFindByName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ShopmeBackEnd" />
       <extension name="coverage">
         <pattern>
@@ -161,7 +154,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.shopme.admin.category" />
       <option name="MAIN_CLASS_NAME" value="com.shopme.admin.category.CategoryRepositoryTests" />
-      <option name="METHOD_NAME" value="testGetCategory" />
+      <option name="METHOD_NAME" value="testFindByName" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CategoryRepositoryTests.testListRootCategories" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ShopmeBackEnd" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shopme.admin.category.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.shopme.admin.category" />
+      <option name="MAIN_CLASS_NAME" value="com.shopme.admin.category.CategoryRepositoryTests" />
+      <option name="METHOD_NAME" value="testListRootCategories" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -219,21 +228,21 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.CategoryRepositoryTests" />
+      <item itemvalue="JUnit.CategoryRepositoryTests.testFindByAlias" />
+      <item itemvalue="JUnit.CategoryRepositoryTests.testFindByName" />
+      <item itemvalue="JUnit.CategoryRepositoryTests.testListRootCategories" />
       <item itemvalue="JUnit.CategoryRepositoryTests.testCreateRootCategory" />
-      <item itemvalue="JUnit.CategoryRepositoryTests.testCreateSubCategory" />
-      <item itemvalue="JUnit.CategoryRepositoryTests.testGetCategory" />
       <item itemvalue="JUnit.CategoryRepositoryTests.testPrintHierarchicalCategories" />
       <item itemvalue="Spring Boot.ShopmeBackEndApplication" />
       <item itemvalue="Spring Boot.ShopmeFrontEndApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CategoryRepositoryTests.testPrintHierarchicalCategories" />
-        <item itemvalue="JUnit.CategoryRepositoryTests.testGetCategory" />
-        <item itemvalue="JUnit.CategoryRepositoryTests.testCreateSubCategory" />
+        <item itemvalue="JUnit.CategoryRepositoryTests.testFindByAlias" />
+        <item itemvalue="JUnit.CategoryRepositoryTests.testFindByName" />
         <item itemvalue="JUnit.CategoryRepositoryTests.testCreateRootCategory" />
-        <item itemvalue="JUnit.CategoryRepositoryTests" />
+        <item itemvalue="JUnit.CategoryRepositoryTests.testListRootCategories" />
+        <item itemvalue="JUnit.CategoryRepositoryTests.testPrintHierarchicalCategories" />
       </list>
     </recent_temporary>
   </component>
@@ -385,6 +394,11 @@
       <workItem from="1711119526956" duration="1185000" />
       <workItem from="1711120722721" duration="138000" />
       <workItem from="1711126732981" duration="197000" />
+      <workItem from="1711315508891" duration="10000" />
+      <workItem from="1711354637909" duration="617000" />
+      <workItem from="1711367837921" duration="2000" />
+      <workItem from="1711370671007" duration="2223000" />
+      <workItem from="1711449865472" duration="3561000" />
     </task>
     <task id="LOCAL-00001" summary="Added Login Page for users">
       <created>1694176119074</created>

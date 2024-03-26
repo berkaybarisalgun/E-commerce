@@ -13,9 +13,6 @@ import org.springframework.context.annotation.Bean;
 @EntityScan({"com.shopme.common.entity","com.shopme.admin.user"})
 public class ShopmeBackEndApplication {
 
-	@Autowired
-	private UserService service;
-
 
 	public static void main(String[] args) {
 		SpringApplication.run(ShopmeBackEndApplication.class, args);
