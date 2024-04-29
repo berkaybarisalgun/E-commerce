@@ -81,6 +81,7 @@ public class Category {
         this(name);
         this.parent = parent;
     }
+
     public Category(Integer id, String name, String alias) {
         super();
         this.id = id;

@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8eb0630b-be5a-4d34-8b17-0a3905705035" name="Changes" comment="Added Login Page for users">
+      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/category/CategoryPageInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/static/js/common_list.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeCommon/src/main/java/com/shopme/common/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeCommon/src/main/java/com/shopme/common/entity/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/FileUploadUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/FileUploadUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/category/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/category/CategoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/category/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/category/CategoryRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/category/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/category/CategoryService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/categories/categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/categories/categories.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/fragments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/modal_fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/modal_fragments.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +84,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/barisalgun/Documents/Projects/E-commerce/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/barisalgun/Documents/Projects/E-commerce/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/static/js&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -97,13 +103,14 @@
       <recent name="com.shopme.admin.user" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/static/js" />
       <recent name="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates" />
       <recent name="C:\Users\bbari\OneDrive\Desktop\Projects\E-commerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\static\images" />
       <recent name="C:\Users\bbari\OneDrive\Desktop\Projects\E-commerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\templates\categories" />
       <recent name="C:\Users\bbari\OneDrive\Desktop\Projects\E-commerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\templates" />
-      <recent name="C:\Users\bbari\OneDrive\Desktop\Projects\E-commerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/static/js" />
       <recent name="C:\Users\bbari\OneDrive\Desktop\Projects\E-commerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\static\images" />
       <recent name="C:\Users\bbari\OneDrive\Desktop\Projects\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\templates\users" />
       <recent name="C:\Users\berka\OneDrive\Masaüstü\Projects\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\static\images" />
@@ -113,8 +120,8 @@
       <recent name="com.shopme.admin.category" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.shopme.admin.category.controller" />
       <recent name="com.shopme.admin.category" />
+      <recent name="com.shopme.admin.category.controller" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.ShopmeBackEndApplication">
@@ -256,7 +263,6 @@
     <attachedChunks>
       <set>
         <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-53826d6a" />
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-322ed176" />
       </set>
     </attachedChunks>
   </component>
@@ -408,6 +414,10 @@
       <workItem from="1711458192341" duration="12000" />
       <workItem from="1711563405632" duration="1298000" />
       <workItem from="1711888691199" duration="1040000" />
+      <workItem from="1711898658942" duration="375000" />
+      <workItem from="1711966104505" duration="602000" />
+      <workItem from="1713970280587" duration="844000" />
+      <workItem from="1714410697958" duration="1123000" />
     </task>
     <task id="LOCAL-00001" summary="Added Login Page for users">
       <created>1694176119074</created>
