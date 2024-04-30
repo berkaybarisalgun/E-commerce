@@ -1,25 +1,20 @@
 <!DOCTYPE html>
-<html xmlns:sec="http://www.w3.org/1999/xhtml">
-<head th:replace="fragments::page_head('Home-Shopme Admin')"/>
-
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head th:replace="fragments :: page_head('Home - Shopme Admin')" />
 <body>
-<div class="container-fluid"></div>
-<div th:replace="navigation::menu"></div>
-<div>
-	<h2>Shopme Control Panel</h2>
-	Welcome
-			<a th:href="@{/account}"
-			   sec:authentication="principal.fullName"></a>
-	&nbsp;
-	<span sec:authentication="principal.authorities"></span>
+<div class="container-fluid">
+	<div th:replace="navigation :: menu"></div>
+	<div>
+		<h2>Shopme Control Panel</h2>
+		Welcome
+		<a th:href="@{/account}"
+			sec:authentication="principal.FullName"></a>
+		<span sec:authentication="principal.authorities"></span>
+	</div>
+
+	<div th:replace="fragments :: footer"></div>
+
 </div>
-
-<div th:replace="fragments::footer"></div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<script type="text/javascript">
-
-</script>
 </body>
 </html>

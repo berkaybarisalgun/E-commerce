@@ -5,17 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8eb0630b-be5a-4d34-8b17-0a3905705035" name="Changes" comment="Added Login Page for users">
-      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/category/CategoryPageInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/static/js/common_list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/security/AuthenticationLoggingListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/user-photos/19/1631039014901.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeCommon/src/main/java/com/shopme/common/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeCommon/src/main/java/com/shopme/common/entity/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/FileUploadUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/FileUploadUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/category/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/category/CategoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/category/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/category/CategoryRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/category/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/category/CategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/categories/categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/categories/categories.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/fragments.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/modal_fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/modal_fragments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/security/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/user/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/static/fontawesome/all.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/static/js/common.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/static/js/common_form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/static/js/common_list.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/static/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/static/webfonts/fa-brands-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/static/webfonts/fa-brands-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/static/webfonts/fa-regular-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/static/webfonts/fa-regular-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/static/webfonts/fa-solid-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/static/webfonts/fa-solid-900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/static/webfonts/fa-v4compatibility.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/static/webfonts/fa-v4compatibility.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/categories/categories.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/categories/category_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/error.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/error/403.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/error/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/error/500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/fragments.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/modal_fragments.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/navigation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/users/account_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/users/user_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/users/users.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/category-images/14" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,11 +138,11 @@
       <recent name="C:\Users\bbari\OneDrive\Desktop\Projects\E-commerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent" />
+      <recent name="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/category-images" />
+      <recent name="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources" />
       <recent name="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/static/js" />
       <recent name="C:\Users\bbari\OneDrive\Desktop\Projects\E-commerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\static\images" />
-      <recent name="C:\Users\bbari\OneDrive\Desktop\Projects\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\templates\users" />
-      <recent name="C:\Users\berka\OneDrive\Masaüstü\Projects\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\static\images" />
-      <recent name="C:\Users\berka\OneDrive\Masaüstü\Projects\ShopmeEcommerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\static" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.shopme.admin.category" />
@@ -241,10 +269,10 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.CategoryRepositoryTests.testCreateRootCategory" />
       <item itemvalue="JUnit.CategoryRepositoryTests.testFindByAlias" />
       <item itemvalue="JUnit.CategoryRepositoryTests.testFindByName" />
       <item itemvalue="JUnit.CategoryRepositoryTests.testListRootCategories" />
-      <item itemvalue="JUnit.CategoryRepositoryTests.testCreateRootCategory" />
       <item itemvalue="JUnit.CategoryRepositoryTests.testPrintHierarchicalCategories" />
       <item itemvalue="Spring Boot.ShopmeBackEndApplication" />
       <item itemvalue="Spring Boot.ShopmeFrontEndApplication" />
@@ -418,6 +446,12 @@
       <workItem from="1711966104505" duration="602000" />
       <workItem from="1713970280587" duration="844000" />
       <workItem from="1714410697958" duration="1123000" />
+      <workItem from="1714413558411" duration="957000" />
+      <workItem from="1714457951336" duration="1535000" />
+      <workItem from="1714459504924" duration="34000" />
+      <workItem from="1714461706389" duration="82000" />
+      <workItem from="1714461795032" duration="8581000" />
+      <workItem from="1714473046437" duration="4000" />
     </task>
     <task id="LOCAL-00001" summary="Added Login Page for users">
       <created>1694176119074</created>

@@ -26,7 +26,7 @@ import java.io.IOException;
 import java.util.List;
 
 @Controller
-public class UserController { //controller->service->repo
+public class UserController {
 
     @Autowired
     private UserService service;
@@ -36,14 +36,17 @@ public class UserController { //controller->service->repo
         return listByPage(1, model, "firstName", "asc", null);
     }
 
-    @GetMapping("/users/list/{pageNum}")
-    public String listByPage(@PathVariable(name = "pageNum") int pageNum, Model model,
-                             @Param("sortField") String sortField, @Param("sortDir") String sortDir,
-                             @Param("keyword") String keyword
+    @GetMapping("/users/page/{pageNum}")
+    public String listByPage(
+            @PathVariable(name = "pageNum") int pageNum, Model model,
+            @Param("sortField") String sortField, @Param("sortDir") String sortDir,
+            @Param("keyword") String keyword
     ) {
         System.out.println("Sort Field: " + sortField);
-        System.out.println("Sort Dir: " + sortDir);
+        System.out.println("Sort Order: " + sortDir);
+
         Page<User> page = service.listByPage(pageNum, sortField, sortDir, keyword);
+
         List<User> listUsers = page.getContent();
 
         long startCount = (pageNum - 1) * UserService.USERS_PER_PAGE + 1;
@@ -52,7 +55,7 @@ public class UserController { //controller->service->repo
             endCount = page.getTotalElements();
         }
 
-        String revereSortDir = sortDir.equals("asc") ? "desc" : "asc";
+        String reverseSortDir = sortDir.equals("asc") ? "desc" : "asc";
 
         model.addAttribute("currentPage", pageNum);
         model.addAttribute("totalPages", page.getTotalPages());
@@ -62,23 +65,24 @@ public class UserController { //controller->service->repo
         model.addAttribute("listUsers", listUsers);
         model.addAttribute("sortField", sortField);
         model.addAttribute("sortDir", sortDir);
-        model.addAttribute("reverseSortDir", revereSortDir);
+        model.addAttribute("reverseSortDir", reverseSortDir);
         model.addAttribute("keyword", keyword);
+
         return "users/users";
-
-
     }
+
 
     @GetMapping("/users/new")
     public String newUser(Model model) {
         List<Role> listRoles = service.listRoles();
 
         User user = new User();
-        user.setEnabled(true);//by default we set it true
+        user.setEnabled(true);
 
         model.addAttribute("user", user);
         model.addAttribute("listRoles", listRoles);
-        model.addAttribute("pageTitle", "Create new User");
+        model.addAttribute("pageTitle", "Create New User");
+
         return "users/user_form";
     }
 
@@ -90,24 +94,26 @@ public class UserController { //controller->service->repo
             String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
             user.setPhotos(fileName);
             User savedUser = service.save(user);
+
             String uploadDir = "user-photos/" + savedUser.getId();
 
             FileUploadUtil.cleanDir(uploadDir);
             FileUploadUtil.saveFile(uploadDir, fileName, multipartFile);
+
         } else {
             if (user.getPhotos().isEmpty()) user.setPhotos(null);
             service.save(user);
         }
 
 
-        //service.save(user);
-        redirectAttributes.addFlashAttribute("message", "The user has been saved succesfully.");//in order to control the successful message
+        redirectAttributes.addFlashAttribute("message", "The user has been saved successfully.");
+
         return getRedirectURLtoAffectedUser(user);
     }
 
-    private static String getRedirectURLtoAffectedUser(User user) {
+    private String getRedirectURLtoAffectedUser(User user) {
         String firstPartOfEmail = user.getEmail().split("@")[0];
-        return "redirect:/users/list/1?sortField=firstName&sortDir=asc&keyword=" + firstPartOfEmail;
+        return "redirect:/users/page/1?sortField=id&sortDir=asc&keyword=" + firstPartOfEmail;
     }
 
     @GetMapping("/users/edit/{id}")
@@ -117,10 +123,10 @@ public class UserController { //controller->service->repo
         try {
             User user = service.get(id);
             List<Role> listRoles = service.listRoles();
-            model.addAttribute("user", user);
-            model.addAttribute("pageTitle", "Edit user(ID: " + id + ")");
-            model.addAttribute("listRoles", listRoles);
 
+            model.addAttribute("user", user);
+            model.addAttribute("pageTitle", "Edit User (ID: " + id + ")");
+            model.addAttribute("listRoles", listRoles);
 
             return "users/user_form";
         } catch (UserNotFoundException ex) {
@@ -134,25 +140,22 @@ public class UserController { //controller->service->repo
                              Model model,
                              RedirectAttributes redirectAttributes) {
         try {
-            service.delete(id);
+            service.delete(id);;
             redirectAttributes.addFlashAttribute("message",
-                    "The user ID:" + id + " deleted succesfully ");
-
+                    "The user ID " + id + " has been deleted successfully");
         } catch (UserNotFoundException ex) {
             redirectAttributes.addFlashAttribute("message", ex.getMessage());
         }
+
         return "redirect:/users";
-
     }
-
 
     @GetMapping("/users/{id}/enabled/{status}")
     public String updateUserEnabledStatus(@PathVariable("id") Integer id,
                                           @PathVariable("status") boolean enabled, RedirectAttributes redirectAttributes) {
         service.updateUserEnabledStatus(id, enabled);
-
         String status = enabled ? "enabled" : "disabled";
-        String message = "The user ID " + id + "has been " + status;
+        String message = "The user ID " + id + " has been " + status;
         redirectAttributes.addFlashAttribute("message", message);
 
         return "redirect:/users";
@@ -171,17 +174,13 @@ public class UserController { //controller->service->repo
 
         UserExcelExporter exporter = new UserExcelExporter();
         exporter.export(listUsers, response);
-
     }
 
     @GetMapping("/users/export/pdf")
-    public void exportToPdf(HttpServletResponse response) throws IOException {
+    public void exportToPDF(HttpServletResponse response) throws IOException {
         List<User> listUsers = service.listAll();
 
         UserPdfExporter exporter = new UserPdfExporter();
         exporter.export(listUsers, response);
-
     }
-
-
 }

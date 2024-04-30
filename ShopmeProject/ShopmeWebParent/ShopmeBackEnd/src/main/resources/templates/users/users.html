@@ -1,284 +1,106 @@
 <!DOCTYPE html>
-<html xmlns:th="http:thymeleaf.org">
-<head th:replace="fragments::page_head('Users-Shopme Admin')"/>
-
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: page_head('Users - Shopme Admin')" />
 <body>
+<div class="container-fluid">
+	<div th:replace="navigation :: menu"></div>
+	<div>
+		<h2>Manage Users</h2>
+		<a th:href="@{/users/new}" class="fas fa-user-plus fa-2x icon-dark mr-2"></a>
 
-<!-- Option 1: Bootstrap Bundle with Popper -->
-<!--
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-        crossorigin="anonymous"></script>
-        TODO:Use it if toogle not working-->
+		<a th:href="@{/users/export/csv}" class="fas fa-file-csv fa-2x icon-dark mr-2"></a>
 
+		<a th:href="@{/users/export/excel}" class="fas fa-file-excel fa-2x icon-dark mr-2"></a>
 
-<div class="container-fluid"></div>
-<div th:replace="navigation::menu"></div>
+		<a th:href="@{/users/export/pdf}" class="fas fa-file-pdf fa-2x icon-dark"></a>
+	</div>
 
-<div th:style="'display: flex; justify-content: space-between; background-image: url(\'' + @{/images/bgphoto.jpg} + '\'); background-size: cover; padding: 20px;'">
+	<div th:if="${message != null}" class="alert alert-success text-center">
+		[[${message}]]
+	</div>
 
-    <div style="color:white">
-        <h2>Manage Users</h2>
-        <br> <br>
-        <a class="fas fa-user-plus fa-2x icon-white" th:href="@{/users/new}"></a>
-        <br>
-        <a>Add</a>
-    </div>
-    <div style="text-align: right;">
-        <span style="color: white; margin-left: 10px;">Export the Data</span>
-        <a th:href="@{/users/export/csv}" title="Export as CSV">
-            <img style="width: 60px;" th:src="@{/images/csvlogo.png}" alt="CSV Logo"/>
-        </a>
-        &nbsp;&nbsp;
-        <a th:href="@{/users/export/excel}" title="Export as Excel">
-            <img style="width: 60px;" th:src="@{/images/excel.png}" alt="Excel Logo"/>
-        </a>
-        &nbsp;&nbsp;
-        <a th:href="@{/users/export/pdf}" title="Export as PDF">
-            <img style="width: 60px;" th:src="@{/images/pdficon.png}" alt="PDF Icon"/>
-        </a>
+	<div th:replace="fragments :: search_form('/users/page/1')" />
 
+	<div class="full-details">
+		<table class="table table-bordered table-striped table-hover table-responsive-xl">
+			<thead class="thead-dark">
+			<tr>
+				<th class="hideable-column">
+				<th th:replace="fragments :: column_link('id', 'User ID', 'tag')" />
+				</th>
 
-    </div>
+				<th>Photos</th>
 
+				<th class="hideable-column">
+				<th th:replace="fragments :: column_link('email', 'E-mail', 'tag')" />
+				</th>
 
-    <div class="alert alert-success text-center" th:if="${message!=null}">
-        [[${message}]]
-    </div>
+				<th th:replace="fragments :: column_link('firstName', 'First Name', 'none')" />
+				<th th:replace="fragments :: column_link('lastName', 'Last Name', 'none')" />
 
-    <div>
-        <form class="form-inline m-3" th:action="@{/users/list/1}">
-            <input name="sortField" th:value="${sortField}" type="hidden"/>
-            <input name="sortDir" th:value="${sortDir}" type="hidden">
+				<th>Roles</th>
+				<th th:replace="fragments :: column_link('enabled', 'Enabled', 'none')" />
+				<th></th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr th:each="user : ${listUsers}">
+				<td class="hideable-column">[[${user.id}]]</td>
+				<td>
+					<div th:replace="fragments :: user_photos" />
+				</td>
+				<td class="hideable-column">[[${user.email}]]</td>
+				<td>[[${user.firstName}]]</td>
+				<td>[[${user.lastName}]]</td>
+				<td>[[${user.roles}]]</td>
 
-            <span style="color: white; font-size: 1.2em;">Filter:</span>&nbsp;
-            <input class="form-control  m-1" name="keyword" required style="width: 200px;" th:value="${keyword}"
-                   type="search"/>
-            &nbsp;&nbsp;
-            <button type="submit" value="Search" class="btn btn-primary">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-            &nbsp;&nbsp;
-            <button onclick="clearFilter()" type="button" value="Clear" class="btn btn-secondary">
-                <i class="fa-solid fa-eraser"></i>
-            </button>
-        </form>
-    </div>
-</div>
+				<td>
+					<div th:replace="fragments :: user_status" />
+				</td>
 
+				<td>
+					<div th:replace="fragments :: user_actions" />
+				</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
 
-<div class="full-details">
-    <table class="table table-bordered table-striped table-hover table-responsive-xl">
-        <thead class="table-dark">
-        <tr>
-            <th class="hideable-column">
-            <th th:replace="fragments::column_link('id','User ID','tag')"/>
+	<div class="less-details">
+		<div th:each="user : ${listUsers}" class="row m-1">
+			<div class="col-4">
+				<div th:replace="fragments :: user_photos" />
+			</div>
+			<div class="col-8">
+				<div>[[${user.fullName}]]</div>
+				<div>[[${user.roles}]]</div>
+				<div class="mt-2">
+					<div th:replace="fragments :: user_status" />
+					&nbsp;
+					<div th:replace="fragments :: user_actions" />
+				</div>
+			</div>
+			<div>&nbsp;</div>
+		</div>
+	</div>
 
+	<div th:replace="fragments :: pagination('/users', 'users')"></div>
 
-            <th> Photos</th>
+	<div th:replace="modal_fragments :: confirm_modal" />
 
-            <th class="hideable-column">
-            <th th:replace="fragments::column_link('email','E-mail','tag')"/>
-            </th>
-
-            <th th:replace="fragments::column_link('firstName','First Name','none')"/>
-
-            <th th:replace="fragments::column_link('lastName','Last Name','none')"/>
-
-
-            <th>
-                <a class="text-white"
-                   th:href="@{'/users/list/' + ${currentPage} + '?sortField=roles&sortDir='+${sortDir}}"
-                   th:if="${sortField!='roles'}">
-                    Roles</a>
-                <a class="text-white"
-                   th:href="@{'/users/list/' + ${currentPage} + '?sortField=roles&sortDir='+${reverseSortDir}}"
-                   th:if="${sortField =='roles'}">
-                    Roles</a>
-
-                <span th:class="${sortDir=='asc' ? 'fas fa-sort-up':'fas fa-sort-down'}"
-                      th:if="${sortField=='roles'}"></span>
-
-            </th>
-
-            <th th:replace="fragments::column_link('enabled','Enabled','none')"/>
-
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="user:${listUsers}">
-            <td class="hideable-column">[[${user.id}]]</td>
-            <td>
-                <span class="fas fa-portrait fa-3x icon-silver" th:if="${user.photos==null}"></span>
-                <!--I will code here later this is images**-->
-                <img style="width: 50px" th:if="${user.photos!=null }"
-                     th:src="@{${user.photosImagePath}}"/>
-            </td>
-            <td class="hideable-column">[[${user.email}]]</td>
-            <td>[[${user.firstName}]]</td><!--Attributes which is "email""firstName"etc has to be same name with-->
-            <td>[[${user.lastName}]]</td>
-            <td>[[${user.roles}]]</td>
-            <td>
-                <a class="fa-sharp fa-solid fa-circle-check fa-2x icon-green"
-                   th:href="@{'/users/' + ${user.id}+'/enabled/false'} "
-                   th:if="${user.enabled==true}"
-                   title="Disable this user"
-                ></a>
-                <a class="fas fa-solid fa-circle fa-2x icon-dark" th:href="@{'/users/' + ${user.id}+'/enabled/true'} "
-                   th:if="${user.enabled==false}"
-                   title="Enable this user"
-                ></a>
-            </td>
-            <td>
-                <a class="fas fa-user-pen fa-2x icon-blue" th:href="@{'/users/edit/'+${user.id}}"
-                   title="Edit this user"></a>
-                &nbsp;
-                <a class="fas fa-solid fa-trash fa-2x icon-red link-delete" th:href="@{'/users/delete/' + ${user.id}}"
-                   th:userId="${user.id}"
-                   title="Delete this user "></a></td><!--Non break space -->
-        </tr>
-        </tbody>
-    </table>
-</div>
-
-<div class="less-details">
-    <div th:each="user:${listUsers}" class="row m-1">
-        <div class="col-4">
-            <span class="fas fa-portrait fa-3x icon-silver" th:if="${user.photos==null}"></span>
-            <img style="width: 50px" th:if="${user.photos!=null }"
-                 th:src="@{${user.photosImagePath}}"/>
-        </div>
-        <div class="col-8">
-            <div>[[${user.fullName}]]</div>
-            <div>[[${user.roles}]]</div>
-            <div class="mt-1">
-                <a class="fa-sharp fa-solid fa-circle-check fa-2x icon-green"
-                   th:href="@{'/users/' + ${user.id}+'/enabled/false'} "
-                   th:if="${user.enabled==true}"
-                   title="Disable this user"
-                ></a>
-                <a class="fas fa-solid fa-circle fa-2x icon-dark" th:href="@{'/users/' + ${user.id}+'/enabled/true'} "
-                   th:if="${user.enabled==false}"
-                   title="Enable this user"
-                ></a>
-
-                <a class="fas fa-user-pen fa-2x icon-blue" th:href="@{'/users/edit/'+${user.id}}"
-                   title="Edit this user"></a>
-                &nbsp;
-                <a class="fas fa-solid fa-trash fa-2x icon-red link-delete" th:href="@{'/users/delete/' + ${user.id}}"
-                   th:userId="${user.id}"
-                   title="Delete this user "></a></td><!--Non break space -->
-            </div>
-        </div>
-        <div>&nbsp;</div>
-    </div>
-</div>
-
-<div class="text-center m-1" th:if="${totalItems>0}">
-
-    <span>Showing users # [[${startCount}]] to [[${endCount}]] of [[${totalItems}]]	 </span>
+	<div th:replace="fragments :: footer"></div>
 
 </div>
-<div class="text-center m-1" th:unless="${totalItems>0}">
-    <span>No users found</span>
-</div>
-<div th:if="${totalPages>1}">
-    <nav>
-        <ul class="pagination justify-content-center flex-wrap">
-            <li th:class="${currentPage>1?'page-item' : 'page-item disabled'}">
-                <a th:replace="fragments :: page_link(1, 'First')"></a>
-            </li>
-            <li th:class="${currentPage>1?'page-item' : 'page-item disabled'}">
-                <a th:replace="fragments :: page_link(${currentPage - 1}, 'Previous')"></a>
-            </li>
-            <li th:class="${currentPage !=i  ? 'page-item':'page-item active'}"
-                th:each="i:${#numbers.sequence(1,totalPages)}">
-                <a th:replace="fragments :: page_link(${i}, ${i})"></a>
-            </li>
-            <li th:class="${currentPage<totalPages ?'page-item' : 'page-item disabled'}">
-                <a th:replace="fragments :: page_link(${currentPage + 1}, 'Next')"></a>
-
-            </li>
-            <li th:class=" ${currentPage<totalPages ?'page-item' : 'page-item disabled'}">
-                <a th:replace="fragments :: page_link(${totalPages}, 'Last')"></a>
-            </li>
-
-        </ul>
-        >
-    </nav>
-</div>
-
-
-<div class="modal fade text-center" id="confirmModal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">Delete Confirmation</h4>
-                <button class="close" data-bs-dismiss="modal" type="button">&times;&times;</button>
-            </div>
-
-            <div class="modal-body">
-                <span id="confirmText"></span>
-            </div>
-            <div class="modal-footer">
-                <a class="btn btn-success" href="" id="yesButton">Yes</a>
-
-
-                <button class="btn btn-danger" data-bs-dismiss="modal" type="button">No</button>
-
-
-            </div>
-
-        </div>
-    </div>
-
-
-
-</div>
-
-
-
-
+<script th:src="@{/js/common_list.js}"></script>
 <script type="text/javascript">
+	moduleURL = "[[@{/users}]]";
 
-    $(document).ready(function () {
-
-        $(".link-delete").on("click", function (e) {
-
-            e.preventDefault();
-
-            link = $(this);
-
-//alert($(this).attr("href"));
-
-            userId = link.attr("userId");
-
-            $("#yesButton").attr("href", link.attr("href"));
-
-            $("#confirmText").text("Are you sure you want to delete this user ID " + userId + "?");
-
-            $("#confirmModal").modal('show');
-
-        });
-
-    });
-
-    function clearFilter() {
-        window.location = "[[@{/users}]]"
-    }
-
+	$(document).ready(function() {
+		$(".link-delete").on("click", function(e) {
+			e.preventDefault();
+			showDeleteConfirmModal($(this), 'user');
+		});
+	});
 </script>
-
-
-<div th:replace="fragments::footer"></div>
-
 </body>
-
 </html>
-
-<body>     <!-- Option 1: Bootstrap Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-        crossorigin="anonymous"></script>
-</body>
-
