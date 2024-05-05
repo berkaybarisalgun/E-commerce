@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8eb0630b-be5a-4d34-8b17-0a3905705035" name="Changes" comment="Added Login Page for users" />
+    <list default="true" id="8eb0630b-be5a-4d34-8b17-0a3905705035" name="Changes" comment="Added Login Page for users">
+      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeCommon/src/main/java/com/shopme/common/entity/Brand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/brand/BrandRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/test/java/com/shopme/admin/brand/BrandRepositoryTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/security/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/categories/categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/categories/categories.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/fragments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/users/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/users/users.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,59 +52,59 @@
     <option name="sortByType" value="true" />
     <option name="sortKey" value="BY_TYPE" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JUnit.CategoryRepositoryTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CategoryRepositoryTests.testCreateRootCategory.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CategoryRepositoryTests.testCreateSubCategory.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CategoryRepositoryTests.testFindByAlias.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CategoryRepositoryTests.testFindByName.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CategoryRepositoryTests.testGetCategory.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CategoryRepositoryTests.testListRootCategories.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CategoryRepositoryTests.testPrintHierarchicalCategories.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.ShopmeBackEnd [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.ShopmeBackEnd [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.ShopmeBackEnd [test].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.ShopmeBackEnd [validate].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.ShopmeBackEndApplication.executor&quot;: &quot;Run&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/barisalgun/Documents/Projects/E-commerce/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/static/js&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;2f1739484174070aeaf0890c91776e0a&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JUnit.CategoryRepositoryTests.executor": "Run",
+    "JUnit.CategoryRepositoryTests.testCreateRootCategory.executor": "Run",
+    "JUnit.CategoryRepositoryTests.testCreateSubCategory.executor": "Run",
+    "JUnit.CategoryRepositoryTests.testFindByAlias.executor": "Run",
+    "JUnit.CategoryRepositoryTests.testFindByName.executor": "Run",
+    "JUnit.CategoryRepositoryTests.testGetCategory.executor": "Run",
+    "JUnit.CategoryRepositoryTests.testListRootCategories.executor": "Run",
+    "JUnit.CategoryRepositoryTests.testPrintHierarchicalCategories.executor": "Run",
+    "JavaScript Debug.index.html.executor": "Run",
+    "Maven.ShopmeBackEnd [clean].executor": "Run",
+    "Maven.ShopmeBackEnd [install].executor": "Run",
+    "Maven.ShopmeBackEnd [test].executor": "Run",
+    "Maven.ShopmeBackEnd [validate].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.ShopmeBackEndApplication.executor": "Run",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/barisalgun/Documents/Projects/E-commerce/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/test/java/com/shopme/admin",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "spring.configuration.checksum": "2f1739484174070aeaf0890c91776e0a",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.shopme.admin.user" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/test/java/com/shopme/admin" />
+      <recent name="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin" />
       <recent name="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/static/js" />
       <recent name="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates" />
       <recent name="C:\Users\bbari\OneDrive\Desktop\Projects\E-commerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\static\images" />
-      <recent name="C:\Users\bbari\OneDrive\Desktop\Projects\E-commerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\templates\categories" />
-      <recent name="C:\Users\bbari\OneDrive\Desktop\Projects\E-commerce\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent" />
@@ -109,6 +118,8 @@
       <recent name="com.shopme.admin.category" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.shopme.admin.security" />
+      <recent name="com.shopme.common.entity" />
       <recent name="com.shopme.admin.category" />
       <recent name="com.shopme.admin" />
       <recent name="com.shopme.admin.category.controller" />
@@ -414,7 +425,7 @@
       <workItem from="1714461706389" duration="82000" />
       <workItem from="1714461795032" duration="8581000" />
       <workItem from="1714473046437" duration="4000" />
-      <workItem from="1714893121250" duration="639000" />
+      <workItem from="1714893121250" duration="2620000" />
     </task>
     <task id="LOCAL-00001" summary="Added Login Page for users">
       <created>1694176119074</created>
