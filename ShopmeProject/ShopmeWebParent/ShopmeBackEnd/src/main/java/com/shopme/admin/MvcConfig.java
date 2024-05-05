@@ -20,7 +20,7 @@ public class MvcConfig implements WebMvcConfigurer {
 
         registry.addResourceHandler("/" + dirName + "/**")
                 .addResourceLocations("file:" + userPhotosPath+"/");
-                
+
 
         String categoryImagesDirName = "../category-images";
         Path categoryImagesDir = Paths.get(categoryImagesDirName);
@@ -29,6 +29,14 @@ public class MvcConfig implements WebMvcConfigurer {
 
         registry.addResourceHandler("/category-images/**")
                 .addResourceLocations("file:" + categoryImagesPath + "/");
+
+        String brandLogosDirName = "../brand-logos";
+        Path brandLogosDir = Paths.get(brandLogosDirName);
+
+        String brandLogosPath = brandLogosDir.toFile().getAbsolutePath();
+
+        registry.addResourceHandler("/brand-logos/**")
+                .addResourceLocations("file:" + brandLogosPath + "/");
     }
 
 }

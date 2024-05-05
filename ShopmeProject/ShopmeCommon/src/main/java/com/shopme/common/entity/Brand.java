@@ -1,8 +1,5 @@
 package com.shopme.common.entity;
 
-//import javax.persistence.*;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
 import jakarta.persistence.*;
 
 import java.util.HashSet;
@@ -28,6 +25,15 @@ public class Brand {
 			inverseJoinColumns = @JoinColumn(name = "category_id")
 			)
 	private Set<Category> categories = new HashSet<>();
+
+	public Brand() {
+
+	}
+
+	public Brand(String name) {
+		this.name = name;
+		this.logo = "brand-logo.png";
+	}
 
 	public Integer getId() {
 		return id;
@@ -61,5 +67,15 @@ public class Brand {
 		this.categories = categories;
 	}
 
+	@Override
+	public String toString() {
+		return "Brand [id=" + id + ", name=" + name + ", categories=" + categories + "]";
+	}
 
+	@Transient
+	public String getLogoPath() {
+		if (this.id == null) return "/images/image-thumbnail.png";
+
+		return "/brand-logos/" + this.id + "/" + this.logo;
+	}
 }
