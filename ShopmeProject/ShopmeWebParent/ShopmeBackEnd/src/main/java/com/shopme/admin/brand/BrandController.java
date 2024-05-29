@@ -39,7 +39,7 @@ public class BrandController {
 			@PathVariable(name = "pageNum") int pageNum, Model model,
 			@Param("sortField") String sortField, @Param("sortDir") String sortDir,
 			@Param("keyword") String keyword
-	) {
+			) {
 		Page<Brand> page = brandService.listByPage(pageNum, sortField, sortDir, keyword);
 		List<Brand> listBrands = page.getContent();
 
@@ -78,7 +78,7 @@ public class BrandController {
 
 	@PostMapping("/brands/save")
 	public String saveBrand(Brand brand, @RequestParam("fileImage") MultipartFile multipartFile,
-							RedirectAttributes ra) throws IOException {
+			RedirectAttributes ra) throws IOException {
 		if (!multipartFile.isEmpty()) {
 			String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
 			brand.setLogo(fileName);
@@ -99,7 +99,7 @@ public class BrandController {
 
 	@GetMapping("/brands/edit/{id}")
 	public String editBrand(@PathVariable(name = "id") Integer id, Model model,
-							RedirectAttributes ra) {
+			RedirectAttributes ra) {
 		try {
 			Brand brand = brandService.get(id);
 			List<Category> listCategories = categoryService.listCategoriesUsedInForm();
@@ -117,8 +117,8 @@ public class BrandController {
 
 	@GetMapping("/brands/delete/{id}")
 	public String deleteBrand(@PathVariable(name = "id") Integer id,
-							  Model model,
-							  RedirectAttributes redirectAttributes) {
+			Model model,
+			RedirectAttributes redirectAttributes) {
 		try {
 			brandService.delete(id);
 			String brandDir = "../brand-logos/" + id;

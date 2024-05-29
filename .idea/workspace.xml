@@ -41,6 +41,7 @@
   <component name="ProjectId" id="2Q7nfWK6VUL23jgApLJiybzsyiU" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="2" id="Remove" />
   </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
@@ -59,6 +60,7 @@
     "JUnit.CategoryRepositoryTests.testGetCategory.executor": "Run",
     "JUnit.CategoryRepositoryTests.testListRootCategories.executor": "Run",
     "JUnit.CategoryRepositoryTests.testPrintHierarchicalCategories.executor": "Run",
+    "JUnit.ProductRepositoryTests.executor": "Run",
     "JavaScript Debug.index.html.executor": "Run",
     "Maven.ShopmeBackEnd [clean].executor": "Run",
     "Maven.ShopmeBackEnd [install].executor": "Run",
@@ -71,12 +73,12 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.ShopmeBackEndApplication.executor": "Run",
+    "Spring Boot.ShopmeBackEndApplication.executor": "Debug",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/barisalgun/Documents/Projects/E-commerce/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/brands",
+    "last_opened_file_path": "/Users/barisalgun/Documents/Projects/E-commerce/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/brand",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -95,11 +97,11 @@
       <recent name="com.shopme.admin.user" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/brands" />
+      <recent name="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/brand" />
+      <recent name="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/products" />
+      <recent name="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/test/java/com/shopme/admin" />
       <recent name="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates" />
       <recent name="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin" />
-      <recent name="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/test/java/com/shopme/admin" />
-      <recent name="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/static/js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent" />
@@ -113,8 +115,8 @@
       <recent name="com.shopme.admin.category" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.shopme.admin.brand" />
       <recent name="com.shopme.common.entity" />
+      <recent name="com.shopme.admin.brand" />
       <recent name="com.shopme.admin.security" />
       <recent name="com.shopme.admin.category" />
       <recent name="com.shopme.admin" />
@@ -185,18 +187,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CategoryRepositoryTests.testPrintHierarchicalCategories" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductRepositoryTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ShopmeBackEnd" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.shopme.admin.category.*" />
+          <option name="PATTERN" value="com.shopme.admin.product.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.shopme.admin.category" />
-      <option name="MAIN_CLASS_NAME" value="com.shopme.admin.category.CategoryRepositoryTests" />
-      <option name="METHOD_NAME" value="testPrintHierarchicalCategories" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.shopme.admin.product" />
+      <option name="MAIN_CLASS_NAME" value="com.shopme.admin.product.ProductRepositoryTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -237,21 +238,21 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.ProductRepositoryTests" />
       <item itemvalue="JUnit.CategoryRepositoryTests.testCreateRootCategory" />
       <item itemvalue="JUnit.CategoryRepositoryTests.testFindByAlias" />
       <item itemvalue="JUnit.CategoryRepositoryTests.testFindByName" />
       <item itemvalue="JUnit.CategoryRepositoryTests.testListRootCategories" />
-      <item itemvalue="JUnit.CategoryRepositoryTests.testPrintHierarchicalCategories" />
       <item itemvalue="Spring Boot.ShopmeBackEndApplication" />
       <item itemvalue="Spring Boot.ShopmeFrontEndApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProductRepositoryTests" />
         <item itemvalue="JUnit.CategoryRepositoryTests.testFindByAlias" />
         <item itemvalue="JUnit.CategoryRepositoryTests.testFindByName" />
         <item itemvalue="JUnit.CategoryRepositoryTests.testCreateRootCategory" />
         <item itemvalue="JUnit.CategoryRepositoryTests.testListRootCategories" />
-        <item itemvalue="JUnit.CategoryRepositoryTests.testPrintHierarchicalCategories" />
       </list>
     </recent_temporary>
   </component>
@@ -421,6 +422,10 @@
       <workItem from="1714461795032" duration="8581000" />
       <workItem from="1714473046437" duration="4000" />
       <workItem from="1714893121250" duration="6205000" />
+      <workItem from="1716999939120" duration="315000" />
+      <workItem from="1717000262813" duration="148000" />
+      <workItem from="1717000440108" duration="15000" />
+      <workItem from="1717000462934" duration="2967000" />
     </task>
     <task id="LOCAL-00001" summary="Added Login Page for users">
       <created>1694176119074</created>
@@ -439,6 +444,22 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Added Login Page for users" />
     <option name="LAST_COMMIT_MESSAGE" value="Added Login Page for users" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/product/ProductController.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/product/ProductController.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
