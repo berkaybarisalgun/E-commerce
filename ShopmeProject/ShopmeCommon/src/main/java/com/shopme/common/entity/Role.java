@@ -1,82 +1,80 @@
 package com.shopme.common.entity;
 
-
-import jakarta.persistence.*;
-
-import java.util.Objects;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "roles")
-public class Role {
+public class Role extends IdBasedEntity {
+	
+	@Column(length = 40, nullable = false, unique = true)
+	private String name;
+	
+	@Column(length = 150, nullable = false)
+	private String description;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-    @Column(length = 40,nullable = false,unique = true)
-    private String name;
+	public Role() {
+	}
+	
+	public Role(Integer id) {
+		this.id = id;
+	}
 
-    @Column(length=150,nullable = false)
-    private String description;
+	public Role(String name) {
+		this.name = name;
+	}	
+	
+	public Role(String name, String description) {
+		this.name = name;
+		this.description = description;
+	}
 
-    public Role() {
-    }
+	public String getName() {
+		return name;
+	}
 
-    public Role(Integer id) {
-        this.id = id;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public Role(String name) {
-        this.name = name;
-    }
+	public String getDescription() {
+		return description;
+	}
 
-    public Role(String name, String description) {
-        this.name = name;
-        this.description = description;
-    }
+	public void setDescription(String description) {
+		this.description = description;
+	}
 
-    public Integer getId() {
-        return id;
-    }
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		return result;
+	}
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Role other = (Role) obj;
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		return true;
+	}
 
-    public String getName() {
-        return name;
-    }
+	@Override
+	public String toString() {
+		return this.name;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Role role = (Role) o;
-        return id.equals(role.id);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
-    }
-
-    @Override
-    public String toString() {
-        return this.name;
-    }
-
-
-
-
+	
 }

@@ -1,11 +1,35 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Welcome to Shopme</title>
-</head>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: page_head('Shopme', 'none')" />
 <body>
-	<h1>Welcome to Shopme Ecommerce</h1>
+<div class="container-fluid">
+	<div th:replace="navigation :: header_menu"></div>
+	<div th:replace="navigation :: search_nav"></div>
+	<div>
+		<h1>Shopping by Categories</h1>
+	</div>
+
+	<!-- Start a new row for categories -->
+	<div class="row">
+		<!-- Iterate over each category, maintaining index for wrapping every four items -->
+		<div th:each="cat, iterStat : ${listCategories}" class="col-md-3">
+			<div>
+				<!-- Make the image clickable by wrapping it in an anchor tag -->
+				<a th:href="@{'/c/' + ${cat.alias}}">
+					<img th:src="@{${cat.imagePath}}" width="80" />
+				</a>
+			</div>
+			<div>
+				<a th:href="@{'/c/' + ${cat.alias}}">[[${cat.name}]]</a>
+			</div>
+			<!-- Close and start a new row after every four categories unless it's the last in the list -->
+			<th:block th:if="${(iterStat.count + 1) % 4 == 0 and not iterStat.last}">
+		</div><div class="row">
+		</th:block>
+	</div>
+	</div>
+
+	<div th:replace="navigation :: footer_menu"></div>
+</div>
 </body>
 </html>
-

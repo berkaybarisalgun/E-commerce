@@ -1,6 +1,5 @@
 package com.shopme.admin.category;
 
-import com.shopme.admin.category.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.PostMapping;

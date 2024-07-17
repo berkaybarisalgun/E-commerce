@@ -1,139 +1,145 @@
 package com.shopme.common.entity;
 
-import jakarta.persistence.*;
-
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
+import javax.persistence.Transient;
+
 @Entity
-@Table(name="users")
-public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+@Table(name = "users")
+public class User extends IdBasedEntity {
+	
+	@Column(length = 128, nullable = false, unique = true)
+	private String email;
+	
+	@Column(length = 64, nullable = false)
+	private String password;
+	
+	@Column(name = "first_name", length = 45, nullable = false)
+	private String firstName;
+	
+	@Column(name = "last_name", length = 45, nullable = false)
+	private String lastName;
+	
+	@Column(length = 64)
+	private String photos;
+	
+	private boolean enabled;
+	
+	@ManyToMany(fetch = FetchType.EAGER)
+	@JoinTable(
+			name = "users_roles",
+			joinColumns = @JoinColumn(name = "user_id"),
+			inverseJoinColumns = @JoinColumn(name = "role_id")
+			)
+	private Set<Role> roles = new HashSet<>();
+	
+	public User() {
+	}
+	
+	public User(String email, String password, String firstName, String lastName) {
+		this.email = email;
+		this.password = password;
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
 
-    @Column(length = 128,nullable = false,unique = true)
-    private String email;
+	public String getEmail() {
+		return email;
+	}
 
-    @Column(length = 64,nullable = false)
-    private String password;
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-    @Column(name="first_name",length = 45,nullable = false)
-    private String firstName;
+	public String getPassword() {
+		return password;
+	}
 
-    @Column(name="last_name",length = 45,nullable = false)
-    private String lastName;
-    @Column(length = 64)
-    private String photos;
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
-    private boolean enabled;
-    @ManyToMany(fetch = FetchType.EAGER) // we used many to many because For example, in an e-commerce application, a user may need to have both the "Seller" and "Editor" roles. In this case, the ManyToMany relationship allows a user to have multiple roles and the same role to be shared by multiple users.
-    @JoinTable(
-            name="users_roles",
-            joinColumns = @JoinColumn(name = "user_id"), //defines foreign key
-            inverseJoinColumns = @JoinColumn(name = "role_id ")//check section 07 page 18 you will get it.
-    )
-    private Set<Role> roles=new HashSet<>();
+	public String getFirstName() {
+		return firstName;
+	}
 
-    public User() {
-    }
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
 
-    public User(String email, String password, String firstName, String lastName) {
-        this.email = email;
-        this.password = password;
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
+	public String getLastName() {
+		return lastName;
+	}
 
-    public Integer getId() {
-        return id;
-    }
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	public String getPhotos() {
+		return photos;
+	}
 
-    public String getEmail() {
-        return email;
-    }
+	public void setPhotos(String photos) {
+		this.photos = photos;
+	}
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+	public boolean isEnabled() {
+		return enabled;
+	}
 
-    public String getPassword() {
-        return password;
-    }
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
+	}
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+	public Set<Role> getRoles() {
+		return roles;
+	}
 
-    public String getFirstName() {
-        return firstName;
-    }
+	public void setRoles(Set<Role> roles) {
+		this.roles = roles;
+	}
+	
+	public void addRole(Role role) {
+		this.roles.add(role);
+	}
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getPhotos() {
-        return photos;
-    }
-
-    public Boolean getEnabled(){
-        return enabled;
-    }
-
-    public void setPhotos(String photos) {
-        this.photos = photos;
-    }
-
-    public boolean isEnabled() {
-        return enabled;
-    }
-
-    public void setEnabled(boolean enabled) {
-        this.enabled = enabled;
-    }
-
-    public Set<Role> getRoles() {
-        return roles;
-    }
-
-    public void setRoles(Set<Role> roles) {
-        this.roles = roles;
-    }
-    public void addRole(Role role){
-        this.roles.add(role);
-    }
-
-    @Override
-    public String toString() { //The toString() method returns textual representation of a object. It will be invoked by System.out.print() method and also by Thymeleaf's print value expression. In most cases, we use toString() for testing/debugging purpose.
-        return "User{" +
-                "id=" + id +
-                ", email='" + email + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", roles=" + roles +
-                '}';
-    }
-    @Transient
-    public String getPhotosImagePath(){
-        if(id==null || photos==null) return "/images/default-user.png";
-        return "/user-photos/"+this.id+"/"+this.photos;
-    }
-    @Transient
-    public String getFullName(){
-        return firstName+" "+lastName;
-    }
-
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", email=" + email + ", firstName=" + firstName + ", lastName=" + lastName
+				+ ", roles=" + roles + "]";
+	}
+	
+	@Transient
+	public String getPhotosImagePath() {
+		if (id == null || photos == null) return "/images/default-user.png";
+		
+		return "/user-photos/" + this.id + "/" + this.photos;
+	}
+	
+	@Transient
+	public String getFullName() {
+		return firstName + " " + lastName;
+	}
+	
+	public boolean hasRole(String roleName) {
+		Iterator<Role> iterator = roles.iterator();
+		
+		while (iterator.hasNext()) {
+			Role role = iterator.next();
+			if (role.getName().equals(roleName)) {
+				return true;
+			}
+		}
+		
+		return false;
+	}
 }

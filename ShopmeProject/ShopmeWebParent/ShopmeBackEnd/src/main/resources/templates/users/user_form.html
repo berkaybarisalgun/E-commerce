@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments :: page_head(${pageTitle})" />
+<head th:replace="fragments :: page_head(${pageTitle}, 'none')" />
 <body>
 <div class="container-fluid">
 	<div th:replace="navigation :: menu"></div>
@@ -54,7 +54,7 @@
 					th:value="${role.id}"
 					class="m-2"
 				/>
-				- <small>[[${role.name}]]</small>
+				- <small>[[${role.description}]]</small>
 				<br/>
 				</th:block>
 			</div>
@@ -91,6 +91,8 @@
 
 </div>
 <script type="text/javascript">
+	MAX_FILE_SIZE = 102400000;
+
 	moduleURL = "[[@{/users}]]";
 
 	function checkEmailUnique(form) {

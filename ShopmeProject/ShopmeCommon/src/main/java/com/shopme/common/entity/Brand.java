@@ -1,23 +1,26 @@
 package com.shopme.common.entity;
 
-import jakarta.persistence.*;
-
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
+import javax.persistence.Transient;
+
 @Entity
 @Table(name = "brands")
-public class Brand {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
-
+public class Brand extends IdBasedEntity {
+	
 	@Column(nullable = false, length = 45, unique = true)
 	private String name;
-
+	
 	@Column(nullable = false, length = 128)
 	private String logo;
-
+	
 	@ManyToMany
 	@JoinTable(
 			name = "brands_categories",
@@ -27,20 +30,17 @@ public class Brand {
 	private Set<Category> categories = new HashSet<>();
 
 	public Brand() {
-
+		
 	}
-
+	
 	public Brand(String name) {
 		this.name = name;
 		this.logo = "brand-logo.png";
 	}
 
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
+	public Brand(Integer id, String name) {
 		this.id = id;
+		this.name = name;
 	}
 
 	public String getName() {
@@ -75,7 +75,7 @@ public class Brand {
 	@Transient
 	public String getLogoPath() {
 		if (this.id == null) return "/images/image-thumbnail.png";
-
-		return "/brand-logos/" + this.id + "/" + this.logo;
+		
+		return "/brand-logos/" + this.id + "/" + this.logo;		
 	}
 }

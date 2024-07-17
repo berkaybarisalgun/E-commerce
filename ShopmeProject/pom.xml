@@ -7,9 +7,9 @@
   <name>ShopmeProject</name>
   <description>Root project</description>
   
-  <modules>	  
-	  <module>ShopmeCommon</module>
-	  <module>ShopmeWebParent</module>
+  <modules>
+  	<module>ShopmeCommon</module>
+  	<module>ShopmeWebParent</module>
   </modules>
   
 </project>

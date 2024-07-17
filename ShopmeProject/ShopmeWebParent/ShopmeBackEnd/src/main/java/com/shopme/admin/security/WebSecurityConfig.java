@@ -1,88 +1,86 @@
 package com.shopme.admin.security;
 
-import jakarta.servlet.ServletException;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
-import org.springframework.security.core.Authentication;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
-
-import java.io.IOException;
 
 @Configuration
 @EnableWebSecurity
-public class WebSecurityConfig {
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Bean
-    UserDetailsService userDetailsService() {
-        return new ShopmeUserDetailsService();
-    }
+	@Bean
+	public UserDetailsService userDetailsService() {
+		return new ShopmeUserDetailsService();
+	}
+	
+	@Bean
+	public PasswordEncoder passwordEncoder() {
+		return new BCryptPasswordEncoder();
+	}
+	
+	public DaoAuthenticationProvider authenticationProvider() {
+		DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
+		authProvider.setUserDetailsService(userDetailsService());
+		authProvider.setPasswordEncoder(passwordEncoder());
+		
+		return authProvider;
+	}
+	
+	@Override
+	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+		auth.authenticationProvider(authenticationProvider());
+	}
 
-    @Bean
-    PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
+	@Override
+	protected void configure(HttpSecurity http) throws Exception {
+		http.authorizeRequests()
+			.antMatchers("/states/list_by_country/**").hasAnyAuthority("Admin", "Salesperson")
+			.antMatchers("/users/**", "/settings/**", "/countries/**", "/states/**").hasAuthority("Admin")
+			.antMatchers("/categories/**", "/brands/**").hasAnyAuthority("Admin", "Editor")
+			
+			.antMatchers("/products/new", "/products/delete/**").hasAnyAuthority("Admin", "Editor")
+			
+			.antMatchers("/products/edit/**", "/products/save", "/products/check_unique")
+				.hasAnyAuthority("Admin", "Editor", "Salesperson")
+				
+			.antMatchers("/products", "/products/", "/products/detail/**", "/products/page/**")
+				.hasAnyAuthority("Admin", "Editor", "Salesperson", "Shipper")
+				
+			.antMatchers("/products/**").hasAnyAuthority("Admin", "Editor")
+			
+			.antMatchers("/orders", "/orders/", "/orders/page/**", "/orders/detail/**").hasAnyAuthority("Admin", "Salesperson", "Shipper")
+			
+			.antMatchers("/customers/**", "/orders/**", "/get_shipping_cost").hasAnyAuthority("Admin", "Salesperson")
+			
+			.antMatchers("/orders_shipper/update/**").hasAuthority("Shipper")
+			
+			.anyRequest().authenticated()
+			.and()
+			.formLogin()			
+				.loginPage("/login")
+				.usernameParameter("email")
+				.permitAll()
+			.and().logout().permitAll()
+			.and()
+				.rememberMe()
+					.key("AbcDefgHijKlmnOpqrs_1234567890")
+					.tokenValiditySeconds(7 * 24 * 60 * 60);
+					;
+			http.headers().frameOptions().sameOrigin();
+	}
 
-    @Bean
-    DaoAuthenticationProvider authenticationProvider() {
-        DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
-        authProvider.setUserDetailsService(userDetailsService());
-        authProvider.setPasswordEncoder(passwordEncoder());
+	@Override
+	public void configure(WebSecurity web) throws Exception {
+		web.ignoring().antMatchers("/images/**", "/js/**", "/webjars/**");
+	}
 
-        return authProvider;
-    }
-
-    @Bean
-    SecurityFilterChain configureHttp(HttpSecurity http) throws Exception {
-
-
-        http.authenticationProvider(authenticationProvider());
-
-        http.authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/users/**").hasAuthority("Admin")
-                        .requestMatchers("/categories/**","/brands/**").hasAnyAuthority("Admin","Editor")
-                        .requestMatchers("/products/**").hasAnyAuthority("Admin", "Editor", "Salesperson", "Shipper")
-                        .anyRequest().authenticated()
-                )
-                .formLogin(form -> form
-                        .loginPage("/login")
-                        .usernameParameter("email")
-                        .permitAll())
-
-                .logout(logout -> logout.permitAll())
-
-                .rememberMe(rem -> rem
-                        .key("AbcDefgHijKlmnOpqrs_1234567890")
-                        .tokenValiditySeconds(7 * 24 * 60 * 60));
-        return http.build();
-    }
-
-
-
-    @Bean
-    public AuthenticationSuccessHandler loggingSuccessHandler() {
-        return new AuthenticationSuccessHandler() {
-
-            @Override
-            public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
-                System.out.println("User successfully logged in: " + authentication.getName());
-                response.sendRedirect("/home"); // Redirect to the home page or other appropriate page
-            }
-        };
-    }
-
-    @Bean
-    WebSecurityCustomizer configureWebSecurity() throws Exception {
-        return (web) -> web.ignoring().requestMatchers("/images/**", "/js/**", "/webjars/**");
-    }
-
+	
 }
