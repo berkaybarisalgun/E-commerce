@@ -1,4 +1,4 @@
-## Spring Boot E-Commerce Project (Completed)
+## Spring Boot E-Commerce Project
 
 This completed project built an e-commerce website with Java, Spring Boot, and other technologies.
 
